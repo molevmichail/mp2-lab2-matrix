@@ -161,7 +161,6 @@ TVector<ValType> TVector<ValType>::operator*(const ValType& val)
 		temp.pVector[i] = pVector[i] * val;
 	return temp;
 }
-//---------------------------------------------------------------------------------//
 template <class ValType> // сложение
 TVector<ValType> TVector<ValType>::operator+(const TVector<ValType>& v)
 {
