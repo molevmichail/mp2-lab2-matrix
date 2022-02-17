@@ -130,7 +130,6 @@ TVector<ValType>& TVector<ValType>::operator=(const TVector& v)
 		pVector = new ValType[v.Size];
 		Size = v.Size;
 		StartIndex = v.StartIndex;
-		pVector = new ValType[v.Size];
 		for (int i = 0; i < Size; i++)
 			pVector[i] = v.pVector[i];
 	}
@@ -267,7 +266,7 @@ bool TMatrix<ValType>::operator==(const TMatrix<ValType>& mt) const
 	if (Size != mt.Size)
 		return 0;
 
-	for (size_t i = 0; i < Size; i++)
+	for (int i = 0; i < Size; i++)
 		if (pVector[i] != mt.pVector[i])
 			return 0;
 
@@ -295,7 +294,7 @@ TMatrix<ValType>& TMatrix<ValType>::operator=(const TMatrix<ValType>& mt)
 			pVector = new TVector<ValType>[Size];
 		}
 
-		for (size_t i = 0; i < Size; i++)
+		for (int i = 0; i < Size; i++)
 			pVector[i] = mt.pVector[i];
 	}
 	return *this;
